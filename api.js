@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 
 // Configuração do banco de dados MySQL
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
+  host: 'sensordb.cpum6aqq2r5m.eu-north-1.rds.amazonaws.com',
+  user: 'Cassiano',
+  password: 'cassiano3241',
   database: 'sensor_db'
 });
 
